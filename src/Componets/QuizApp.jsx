@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Sample questions data with additional questions
+
 const questions = [
   {
     question: "What is the capital of France?",
@@ -35,7 +35,7 @@ const questions = [
   },
 ];
 
-// Question component
+
 const Question = ({ question, options, onAnswer, selected }) => (
   <div className="card p-4 mb-4 w-100" style={{ maxWidth: '500px' }}>
     <h2 className="card-title h5 mb-3">{question}</h2>
@@ -53,7 +53,7 @@ const Question = ({ question, options, onAnswer, selected }) => (
   </div>
 );
 
-// Result component
+
 const Result = ({ score, total, onRestart }) => (
   <div className="card p-4 text-center w-100" style={{ maxWidth: '500px' }}>
     <h2 className="card-title h4 mb-3">Quiz Completed!</h2>
@@ -69,7 +69,6 @@ const Result = ({ score, total, onRestart }) => (
   </div>
 );
 
-// Main App component
 const QuizApp = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
